@@ -10,7 +10,7 @@ public class Genre
 
     public ICollection<Artist> Artists { get; set; }
     public ICollection<Album> Albums { get; set; }
-    
+
     public override string ToString()
     {
         return $"[{Id}] {Name}";

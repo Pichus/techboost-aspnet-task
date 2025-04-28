@@ -6,7 +6,7 @@
       context: .
       dockerfile: Dockerfile
     environment:
-          - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "8080:8080"
     depends_on:

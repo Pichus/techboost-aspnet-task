@@ -13,21 +13,19 @@ public class Feedback
     public int Rating { get; set; }
 
     public string? Comment { get; set; }
-    
+
     public User User { get; set; }
     public Album Album { get; set; }
-    
+
     public override string ToString()
     {
         const int maxCommentSnippetLength = 30;
-        string commentDisplay = "null";
+        var commentDisplay = "null";
 
         if (Comment != null)
-        {
             commentDisplay = Comment.Length <= maxCommentSnippetLength
                 ? $"'{Comment}'"
                 : $"'{Comment.Substring(0, maxCommentSnippetLength)}...'";
-        }
 
         var sb = new StringBuilder();
         sb.Append("Feedback(Id=").Append(Id);

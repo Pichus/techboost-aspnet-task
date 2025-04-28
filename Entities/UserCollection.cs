@@ -10,10 +10,11 @@ public class UserCollection
 
     public User User { get; set; }
     public Album Album { get; set; }
-    
+
     public override string ToString()
     {
-        return $"UserCollection {{ Id = {Id}, UserId = {UserId}, AlbumId = {AlbumId}, AddedAt = {AddedAt}, Status = \"{Status}\", " +
-               $"User = {User?.ToString() ?? "null"}, Album = {Album?.ToString() ?? "null"} }}";
+        return
+            $"UserCollection {{ Id = {Id}, UserId = {UserId}, AlbumId = {AlbumId}, AddedAt = {AddedAt}, Status = \"{Status}\", " +
+            $"User = {User?.ToString() ?? "null"}, Album = {Album?.ToString() ?? "null"} }}";
     }
 }

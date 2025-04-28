@@ -18,7 +18,7 @@ public class Album
 
     public ICollection<Genre> Genres { get; set; }
     public ICollection<Artist> Artists { get; set; }
-    
+
     public override string ToString()
     {
         var sb = new StringBuilder();

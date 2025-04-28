@@ -17,21 +17,19 @@ public class Track
     public Album Album { get; set; }
     public ICollection<Playlist> Playlists { get; set; }
     public ICollection<Artist> Artists { get; set; }
-    
+
     public override string ToString()
     {
-        string titlePart = Title ?? "null";
-        string durationPart = Duration.ToString("c"); 
+        var titlePart = Title ?? "null";
+        var durationPart = Duration.ToString("c");
 
-        string artistsStr = "null";
+        var artistsStr = "null";
         if (Artists != null) // Check collection exists
-        {
-             artistsStr = "[" + string.Join(", ", Artists.Select(a => a?.ToString() ?? "null")) + "]";
-        }
-        
-        string chartPart = ChartPosition > 0 ? ChartPosition.ToString() : "N/A";
-        
-        string lyricistPart = string.IsNullOrEmpty(Lyricist) ? "null" : $"'{Lyricist}'";
+            artistsStr = "[" + string.Join(", ", Artists.Select(a => a?.ToString() ?? "null")) + "]";
+
+        var chartPart = ChartPosition > 0 ? ChartPosition.ToString() : "N/A";
+
+        var lyricistPart = string.IsNullOrEmpty(Lyricist) ? "null" : $"'{Lyricist}'";
 
         var sb = new StringBuilder();
         sb.Append("Track(Id=").Append(Id);

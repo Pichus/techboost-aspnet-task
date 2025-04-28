@@ -11,11 +11,11 @@ public class Playlist
 
     public User User { get; set; }
     public ICollection<Track> Tracks { get; set; }
-    
+
     public override string ToString()
     {
-        string datePart = CreatedAt.ToString("o"); 
-        string namePart = Name ?? "null";
+        var datePart = CreatedAt.ToString("o");
+        var namePart = Name ?? "null";
 
         var sb = new StringBuilder();
         sb.Append("Playlist(Id=").Append(Id);

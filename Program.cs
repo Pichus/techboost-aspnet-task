@@ -18,7 +18,7 @@ if (app.Environment.IsDevelopment())
         var db = scope.ServiceProvider.GetRequiredService<MusicCollectionDbContext>();
         await db.Database.MigrateAsync();
     }
-    
+
     app.UseSwagger();
     app.UseSwaggerUI();
 }
